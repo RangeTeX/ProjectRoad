@@ -1,0 +1,28 @@
+{% extends "header.html" %}
+{% set active_page = "stats" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% block body %}
+    <p>A live data visualiser tracking traffic hotspots and crashes designed to show problems in the transport
+        network.</p>
+    <h2>Stats for nerds:</h2>
+    <table class='table table-striped'>
+        <tbody>
+        <tr>
+            <td>number of traffic usage points in database</td>
+            <td>{{ stat_hotspots }}</td>
+        </tr>
+        <tr>
+            <td>maximum daily use of a road in Victoria</td>
+            <td>{{ stat_highest }}</td>
+        </tr>
+        </tbody>
+    </table>
+{% endblock %}
+</body>
+</html>

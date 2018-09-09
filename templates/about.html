@@ -1,0 +1,41 @@
+{% extends "header.html" %}
+{% set active_page = "about" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% block body %}
+    <h3>The problem</h3>
+    <p>Vicroads manages approximately 23,000 kilometres of arterial road network across Victoria, which is worth over
+        $20 billion. Imagine the maintenance upkeep for such an infrastructure. Current systems involve periodic
+        inspections of roads.</p>
+    <p>The current process for this involves</p>
+    <ul>
+        <li>Manually checking</li>
+        <li>Complaints to council/vicroads</li>
+        <li>Time based not info based</li>
+        <li>Doesn’t take into account local conditions, geography, weather</li>
+    </ul>
+    <p>We set out to assist in improving this process.</p>
+
+
+    <h3>The solution</h3>
+    <p>Project Road uses VicRoads traffic volume data to show possible hotspots of road damage.</p>
+
+    <p>Using VicRoads Crash data we can also see a link between heavy use roads as well as damaged roads and crash
+        incidents.</p>
+
+    <p>The BOM Australian Landscape Water Balance data would allow Project Road to make predictions on road degradation
+        due to landmass changes.</p>
+    <h3>Long term</h3>
+    <p>Project Road would benefit from the development of smart integrated devices that would provide direct information
+        about roads and what condition they are in to then further help road maintenance crew find roads that are
+        failing due to unforeseen events like weather affecting the underlying water ground moisture and crashes that
+        could affect the road and its structure.</p>
+
+{% endblock %}
+</body>
+</html>
