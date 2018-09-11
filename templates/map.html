@@ -41,6 +41,7 @@
             font-weight: bold;
         }
 
+
         .close:hover,
         .close:focus {
             color: #000;
@@ -61,10 +62,48 @@
 </head>
 <body>
 {% block body %}
-
+<div style="
+    display: flex;
+    flex-direction:  column;
+    min-height: 100vh;
+">
     {{ map.html }}
+</div>
+    
     <!-- Trigger/Open The Modal -->
-    <button id="myBtn">Open Config</button>
+    <nav class="navbar navbar-default"  style=" margin-bottom: 0px; overflow: hidden; position: fixed; bottom: 0; width: 100%;">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Settings</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li> <button id="myBtn" type="button" class="btn" style="background: #F8F8F8;padding-top: 15px;padding-bottom: 15px;border:  0px;color:  #777;">Open Config</button>
+                </li>
+                <li class="{{ "active" if active_page == 'stats' else '' }}"><a href="{{ url_for('stats') }}">Stats</a>
+                </li>
+                <li class="{{ "active" if active_page == 'about' else '' }}"><a href="{{ url_for('about') }}">About</a>
+                </li>
+                <li>
+<div class="btn-group dropup">
+  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Dropup
+  </button>
+  <div class="dropdown-menu">
+    <!-- Dropdown menu links -->
+      <div class="dropdown-menu" x-placement="top-start" style="position: absolute; transform: translate3d(0px, -2px, 0px); top: 0px; left: 0px; will-change: transform;">
+      <a class="dropdown-item" href="#">Action</a>
+      <a class="dropdown-item" href="#">Another action</a>
+      <a class="dropdown-item" href="#">Something else here</a>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="#">Separated link</a>
+    </div>
+  </div>
+</div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
 
     <!-- The Modal -->
     <div id="myModal" class="modal">

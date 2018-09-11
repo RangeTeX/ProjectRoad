@@ -35,7 +35,7 @@ def map_view():
         lat=-38.01973,
         lng=145.3008,
         center_on_user_location=True,
-        style='height:500px;width:auto;margin:0;',
+        style='height:500px;width:auto;margin:0;flex-grow:1;',
         # markers is a list of tuples
         # if we write a func that returns [(lat,long),(lat,long),...]
         # we can plot that shit :D

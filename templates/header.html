@@ -35,7 +35,7 @@
 
 <body>
 {% block nav %}
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-default" style="margin-bottom: 0px;">
         <div class="container-fluid">
             <div class="navbar-header">
                 <a class="navbar-brand" href="#">GovHack - Project Road</a>
@@ -48,6 +48,7 @@
                 <li class="{{ "active" if active_page == 'about' else '' }}"><a href="{{ url_for('about') }}">About</a>
                 </li>
                 <li><a href="{{ url_for('gitlink') }}">Git</a></li>
+
             </ul>
         </div>
     </nav>
