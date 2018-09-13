@@ -1,4 +1,4 @@
-{% extends "header.html" %}
+ {% extends "header.html" %}
 {% set active_page = "map" %}
 <!DOCTYPE html>
 
@@ -71,7 +71,7 @@
 </div>
     
     <!-- Trigger/Open The Modal -->
-    <nav class="navbar navbar-default"  style=" margin-bottom: 0px; overflow: hidden; position: fixed; bottom: 0; width: 100%;">
+    <nav class="navbar navbar-default"  style=" margin-bottom: 0px; position: fixed; bottom: 0; width: 100%;">
         <div class="container-fluid">
             <div class="navbar-header">
                 <a class="navbar-brand" href="#">Settings</a>
@@ -85,18 +85,19 @@
                 </li>
                 <li>
 <div class="btn-group dropup">
-  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background:#F8F8F8; color: #777 ">
     Dropup
   </button>
   <div class="dropdown-menu">
     <!-- Dropdown menu links -->
-      <div class="dropdown-menu" x-placement="top-start" style="position: absolute; transform: translate3d(0px, -2px, 0px); top: 0px; left: 0px; will-change: transform;">
-      <a class="dropdown-item" href="#">Action</a>
-      <a class="dropdown-item" href="#">Another action</a>
-      <a class="dropdown-item" href="#">Something else here</a>
-      <div class="dropdown-divider"></div>
-      <a class="dropdown-item" href="#">Separated link</a>
-    </div>
+               <form action="/">                                                    
+                   <input type="submit" name="low" value="f" class="btn">
+                   <input type="checkbox" name="med" value="true">Med<br>           
+                   <input type="checkbox" name="high" value="true">High<br>         
+                   <input type="checkbox" name="crash" value="true">Crash<br>       
+                   <input type="submit" value="Submit">                             
+               </form>                                                              
+
   </div>
 </div>
                 </li>
